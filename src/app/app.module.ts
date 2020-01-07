@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { WelcomeModule } from './welcome/welcome.module';
 import { SharedModule } from './shared/shared.module';
@@ -15,6 +15,7 @@ import { PhotoModule } from './photo/photo.module';
     AppComponent
   ],
   imports: [
+    FontAwesomeModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,

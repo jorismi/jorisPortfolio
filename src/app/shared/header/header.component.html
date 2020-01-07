@@ -1,11 +1,33 @@
-<nav class='navbar navbar-expand navbar-light bg-light'>
-    <a class='navbar-brand'>
-        <img src="../../../assets/images/tmpBrandLogo.png" width="30" height="30" alt="">
-    </a>
-    <ul class='nav nav-pills'>
-        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/welcome']">Acceuil</a></li>
-        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/photo']">Photographies</a></li>
-        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/video']">Vidéos</a></li>
-        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/video']">A propos</a></li>
-    </ul>
+<div>
+	<h1>LOGO</h1>
+</div>
+<nav class="navbar navbar-expand">
+	<div>
+		<ul class="nav navbar-nav">
+			<li>
+				<a routerLinkActive='active' [routerLink]="['/welcome']">
+					<span class="fa fa-home"></span>
+					<span class="link">Accueil</span>
+				</a>
+			</li>
+			<li>
+				<a routerLinkActive='active' [routerLink]="['/photo']">
+					<span class="fa fa-camera-retro"></span>
+					<span class="link">Photos</span>
+				</a>
+			</li>
+			<li>
+				<a routerLinkActive='active' [routerLink]="['/video']">
+					<span class="fa fa-film"></span>
+					<span class="link">Vidéos</span>
+				</a>
+			</li>
+			<li>
+				<a routerLinkActive='active' [routerLink]="['/about']">
+					<span class="fa fa-address-card"></span>
+					<span class="link">A propos</span>
+				</a>
+			</li>
+		</ul>
+	</div>
 </nav>
