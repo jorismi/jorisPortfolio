@@ -1,28 +1,13 @@
-/*.nav-link {
-  font-size: large;
-}*/
-
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-// Body
-body {
-	margin: 10%;
-	color: white;
-	background: #111111;
-	font-family: 'Roboto', sans-serif;
-}
-
-.navbar .fa, .link, a{
-	color : white;
-}
-
 .navbar {
 	border-radius : 8px;
 	background: linear-gradient(to right, #4c135e, #5a3f77);
 }
 
+.navbar .fa, .link, a, .navbar span{
+	color : white;
+}
+
 .navbar .nav li > a {
-	max-height: 50px;
 	width: auto;
 	background: transparent !important;
 	font-size: 30px;
@@ -32,8 +17,8 @@ body {
 		font-size: 20px;
 		.link {
 			width: 100%;
-			padding: 0 5px 0 5px;
-			visibility: visible;
+			padding: 0 10px 0 20px;
+			visibility: visible; 
 			font-size: 25px;
 		}
 	}
@@ -46,45 +31,3 @@ body {
 	visibility: hidden;
 	font-size: 0px;
 }
-
-.navbar span {
-	color: white;
-}
-
-/*
-// Small Devices
-@media(max-width: 769px) {
-	.navbar {
-		.link {
-			padding-left: 10px;
-			visibility: visible;
-			width: 100%;
-			font-size: 14px;
-		}
-		.navbar-brand {
-			.link {
-				visibility: hidden;
-			}
-		}
-	}
-	.dropdown {
-		.dropdown-menu {
-			text-align: left !important;
-		}
-	}
-	button[type=submit] {
-		width: 50%;
-		float: left;
-	}
-	.navbar-form {
-		border: 0;
-	}
-	.form-group {
-		padding: 0;
-		margin: 0;
-		input {
-			width: 50%;
-			float: left
-		}
-	}
-}*/
