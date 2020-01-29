@@ -1,5 +1,7 @@
 .footer{
     color: #fff;
+    position: relative;
+	z-index: 999;
 }
 
 .footer #button{
@@ -72,6 +74,14 @@
     text-align:center;
 }
 
+.footer-group-text{
+    border-radius: 1em;
+    background-color: black;
+    width: fit-content;
+    padding: 0.1em 1em 0.1em 1em;
+    margin: 0.5em auto 0.2em auto;
+}
+
 .button-footer-list {
     max-width: 600px;
     justify-content: center;
@@ -94,7 +104,6 @@
     margin: 5px 5px 5px 5px;
     font-family: 'Roboto Condensed', Sans Serif;
     &:hover{
-        //width: 120px;
         transform: scale(1.1);
         box-shadow: 0.1em 0.1em 0.5em 0.2em #00000050;
     }
@@ -116,10 +125,10 @@
 /******* SOCIAL SECTION ******/
 
 $timing        : 265ms;
-$iconColor     : #1b1b1b;
+$iconColor     : #000000;
 $accent        : #000000;
-$bluefade      : #1a1a1a;
-$gradient      : #1b1b1b;
+$bluefade      : #000000;
+$gradient      : #000000;
 
 @mixin transformScale($size: 1) {
     transform: scale($size);
@@ -170,7 +179,8 @@ $gradient      : #1b1b1b;
             height: 80px;
             border-radius: 100%;
             display: block;
-            background: linear-gradient(45deg, $iconColor, $accent);
+            //background: linear-gradient(45deg, $iconColor, $accent);
+            background: black;
             //background:black;
             transition: all $timing ease-out;
         }
@@ -183,7 +193,8 @@ $gradient      : #1b1b1b;
         &:hover i {
             @include transformScale(2);
             //border: 2px solid green;
-            color: $iconColor;
+            //color: $iconColor;
+            color: black;
             //background: -webkit-linear-gradient(45deg, $iconColor, $accent);
             background:black;
             -webkit-background-clip: text;

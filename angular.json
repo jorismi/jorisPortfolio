@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/multiscroll.js/dist/jquery.multiscroll.min.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/multiscroll.js/vendors/jquery.easings.min.js",
+              "node_modules/multiscroll.js/dist/jquery.multiscroll.min.js"
             ]
           },
           "configurations": {

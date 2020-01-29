@@ -1,3 +1,10 @@
+.header{
+	position: relative;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+}
+
 .navbar {
 	border-radius : 8px;
 	background: linear-gradient(to right, #4c135e, #5a3f77);

@@ -10,6 +10,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WelcomeModule } from './welcome/welcome.module';
 import { SharedModule } from './shared/shared.module';
 import { PhotoModule } from './photo/photo.module';
+import { ProjectModule } from './project/project.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -24,6 +26,7 @@ import { PhotoModule } from './photo/photo.module';
     WelcomeModule,
     SharedModule,
     PhotoModule,
+    ProjectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
