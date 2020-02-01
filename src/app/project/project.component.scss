@@ -144,10 +144,16 @@ p{
 	top:23%;
 	}
 
-.section1 img {
-	margin: 24px 0 15px 0;
+.section1{
+	background:#000;
 }
 
+.ms-right .section1{
+  background-image: url("https://github.com/jorismi/jorisPortfolio/blob/master/src/assets/projectImages/gym1.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: auto 100%;
+}
 
 /* Section 2
  * --------------------------------------- */
