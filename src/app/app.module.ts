@@ -11,6 +11,7 @@ import { WelcomeModule } from './welcome/welcome.module';
 import { SharedModule } from './shared/shared.module';
 import { PhotoModule } from './photo/photo.module';
 import { ProjectModule } from './project/project.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProjectModule } from './project/project.module';
     SharedModule,
     PhotoModule,
     ProjectModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
