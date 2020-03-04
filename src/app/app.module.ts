@@ -12,10 +12,12 @@ import { SharedModule } from './shared/shared.module';
 import { PhotoModule } from './photo/photo.module';
 import { ProjectModule } from './project/project.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutComponent } from './about/about/about.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent
   ],
   imports: [
     FontAwesomeModule,

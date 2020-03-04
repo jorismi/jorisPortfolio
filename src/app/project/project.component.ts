@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'jp-project',
@@ -6,14 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project.component.scss']
 })
 
-export class ProjectComponent implements OnInit {
+// TODO regler le problème de l'apparition de plusieurs scroll à droite, lors des aller-retours sur la page projet
+export class ProjectComponent implements OnInit, OnDestroy {
 
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     $(document).ready(function () {
-      (<any>$('#multiscroll')).multiscroll({
+      (<any>$('#myContainer')).multiscroll({
         verticalCentered: true,
         scrollingSpeed: 700,
         easing: 'easeInQuart',
@@ -51,5 +52,10 @@ export class ProjectComponent implements OnInit {
         afterResize: function () { },
       });
     });
+  }
+
+  public ngOnDestroy() {
+    // Code de destruction du multiscroll?
+    //(<any>$('#myContainer')).multiscroll.destroy();
   }
 }

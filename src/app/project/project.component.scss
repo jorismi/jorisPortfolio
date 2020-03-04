@@ -1,5 +1,4 @@
 #myContainer{
-  background-color: blue;
   position: static;
   z-index: -999;
 }
@@ -20,6 +19,16 @@ p{
 	top:23%;
 }
 
+.fa-github, .fa-android{
+	font-size: 5em;
+	padding : 1em;
+}
+
+.fa-chrome{
+	font-size: 4em;
+	padding : 1em;
+}
+
 /* Section 1 TimePlanck
  * --------------------------------------- */
 .section1{
@@ -27,25 +36,36 @@ p{
 }
 
 .section1 .fa-github, .section1 .fa-android{
-  font-size: 5em;
-  padding : 1em;
-  color: white;
+	color: white;
 }
 
 .ms-right .section1{
-  background-image: url("../../assets/projectImages/gym1WithoutHands.png");
+  	background-image: url("../../assets/projectImages/gym1WithoutHands.png");
 	background-repeat: no-repeat;
 	background-position: right;
 	background-size: auto 100%;
 }
 
 .timeplanck{
-  left: 30%;
-  width: 90%;
-  height: 30em;
-  text-align: center;
-  vertical-align: middle;
+	left: 30%;
+	width: 90%;
+	height: 30em;
+	text-align: center;
+	vertical-align: middle;
 }
+
+.timeplanck + .tooltip > .tooltip-inner {
+	background-color: #73AD21;
+	color: #FFFFFF;
+	border: 1px solid green;
+	padding: 15px;
+	font-size: 20px;
+  }
+
+  /* Tooltip on top */
+.timeplanck + .tooltip.top > .tooltip-arrow {
+	border-top: 5px solid green;
+  }
 
 .section1 h1{
 	color: white;
@@ -53,14 +73,14 @@ p{
 
 .section1 h2{
 	margin: 1.5em 0 0 0;
-  color: #a7a7a7;
-  display: linline; 
+  	color: #a7a7a7;
+  	display: linline; 
 }
 
 .section1 h2 img{
-  width: 8em;
-  height: 3em;
-  margin: 0 0 1em 0;
+	width: 8em;
+	height: 3em;
+	margin: 0 0 1em 0;
 }
 
 .section1 p{
@@ -71,21 +91,47 @@ p{
 /* Section 2
  * --------------------------------------- */
 .section2{
-	background:#000;
+	background:#F8E4AF;
 }
 
-.ms-right .section2{
-	background-image: url(https://goo.gl/FDTJGU);
+.ms-left .section2{
+	background-image: url("../../assets/projectImages/fairDraw7.jpg");
 	background-repeat: no-repeat;
-	background-position: right;
-	background-size: auto 100%;
+	background-position: left;
+	background-size: auto 90%;
+}
+
+.fairDraw{
+	left: 30%;
+	width: 90%;
+	height: 30em;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .section2 h1{
-	color: #fff;
+	color: black;
 }
+
 .section2 h2{
-  color: #8a8a8a;
+	margin: 1.5em 0 0 0;
+  	color: #414141;
+  	display: linline; 
+}
+
+.section2 h2 img{
+	width: 5em;
+	height: 3em;
+	border-radius: 25%;
+}
+
+.section2 p{
+	margin: 1em 0 0 0;
+	color: #555555;
+}
+
+.section2 .fa-github, .section2 .fa-chrome{
+	color: black;
 }
 
 /* Section 3
