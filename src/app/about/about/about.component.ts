@@ -6,29 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
+//TODO Implement display/hide card
   buttonFilters = [
-    {
-      content: 'Angular'
-    },
-    {
-      content: 'HTML'
-    },
-    {
-      content: 'NodeJS'
-    },
-    {
-      content: 'CSS'
-    },
-    {
-      content: 'JS'
-    },
-    {
-      content: 'PHP'
-    },
-    {
-      content: 'JamaisVu'
-    }
+    { content: 'Angular' }, { content: 'HTML' }, { content: 'NodeJS' }, { content: 'CSS' }, { content: 'JS' }, { content: 'PHP' }, { content: 'JamaisVu' }
   ];
 
   getLargeurValeur() {
@@ -40,54 +20,6 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    var clickFilterButton = function () {
-      let toActivate = false;
-      this.classList.contains("activated")
-        ? (this.toActivate = false)
-        : (this.toActivate = true);
-      this.toActivate
-        ? this.classList.add("activated")
-        : this.classList.remove("activated");
-
-      var filterButtons = document.getElementsByClassName("filterBtn");
-      for (var i = 0; i < filterButtons.length; i++) {
-        if (this.innerHTML == filterButtons[i].innerHTML) {
-          this.toActivate
-            ? filterButtons[i].classList.add("activated")
-            : filterButtons[i].classList.remove("activated");
-        }
-      }
-
-      function saverange(newValue) {
-        this.range = newValue;
-        this.Platform.ready().then(() => {
-          this.rootRef.child("users").child(this.UserID).child('range').set(this.range)
-        })
-      }
-    };
-
-    function valueChanged(Event) {
-      var slider = document.getElementById("largeur");
-      document.getElementById("sliderValue").innerHTML = slider.nodeValue;
-    }
-    /*var filterButtons = document.getElementsByClassName("filterBtn");
-    for (var i = 0; i < filterButtons.length; i++) {
-      console.log(filterButtons[i].innerHTML);
-      filterButtons[i].onclick = clickFilterButton;
-    }
-
-    var slider = document.getElementById("largeur");
-    document.getElementById("sliderValue").innerHTML = slider.value;
-    let boxCss = document.querySelector(".box");
-    boxCss.style.width = slider.value + "%";
-
-    function showVal() {
-      var slider = document.getElementById("largeur");
-      document.getElementById("sliderValue").innerHTML = slider.value;
-      let boxCss = document.querySelector(".box");
-      boxCss.style.width = slider.value + "%";
-    }*/
-
   }
 
   activateFilter(event: MouseEvent) {
@@ -109,5 +41,4 @@ export class AboutComponent implements OnInit {
       }
     }
   }
-
 }

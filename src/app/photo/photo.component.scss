@@ -1,0 +1,108 @@
+.photosList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photoListElement {
+    margin: 1rem;
+    height: 30vh;
+    flex-grow: 1;
+}
+
+.photoListElement:last-child {
+    flex-grow: 10;
+}
+
+.photo {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    border: 0.5rem solid black;
+    transition: all 0.5s ease-in-out;
+}
+
+.photo:hover {
+    box-shadow: 0.5rem 0.5rem 0.25rem grey;
+    transform: scale(1.02);
+    border: 0rem solid white;
+}
+
+.bluredPhoto{
+    //filter: saturate(40%);
+    filter: blur(0.2rem);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    z-index: 1000;
+}
+  
+.modal-content {
+    background-color: #fefefe;
+    max-width: 50vw;
+    border: 2px solid white;
+    margin: 5vh auto 0 auto;
+}
+  
+.close {
+    color: white;
+    position: absolute;
+    top: 0rem;
+    right: 2rem;
+    font-size: 10rem;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: hsl(0, 100%, 50%);
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+  
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 1rem;
+    margin-top: -35%;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+  /* Caption text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}

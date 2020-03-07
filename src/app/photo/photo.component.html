@@ -1,1 +1,27 @@
-<p>photo works!</p>
+<ul class="photosList">
+    <li class="photoListElement" *ngFor="let photo of photos; let i = index">
+        <img class="photo" id="photoNumber{{ i }}" src="assets/photos/large/{{ photo.name }}" alt="{{ photo.alt }}"
+            loading="lazy" (click)="openPhotoModal(i)" (mouseenter)="photoHovered($event)"
+            (mouseleave)="photoLeft()">
+    </li>
+    <li class="photoListElement"></li>
+</ul>
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+    <span class="close cursor" (click)="closePhotoModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="currentSlide">
+            <img src="assets/photos/large/{{currentSlideName}}" style="width:100%">
+          </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" (click)="changeSlide(-1)">&#10094;</a>
+        <a class="next" (click)="changeSlide(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+            <p id="caption">{{currentSlideCaption}}</p>
+        </div>
+    </div>
+</div>
