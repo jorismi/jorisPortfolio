@@ -3,13 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'jp-photo',
   templateUrl: './photo.component.html',
-  styleUrls: ['./photo.component.scss']
+  styleUrls: ['./photo.component.scss'],
+  host: {
+    '(document:click)': 'clickout($event)',
+  },
 })
 export class PhotoComponent implements OnInit {
-  //TODO Activer le scrolling sur la section photo
-  //TODO Harmoniser les tailles des photos affichées et le positionnement des flèches dans le slider Photo
-  //TODO Mettre des icones de croix et de flèche et améliorer le design du texte dans le slide photo
-  //TODO Faire apparaitre et disparaitre la fenetre modal avec un ngIf
+  //TODO BONUS Faire apparaitre et disparaitre la fenetre modal avec un ngIf
   //TODO BONUS faire un wiggle pour les flèches quand on est tout à gauche ou a droite des slides Photos
   //TODO BONUS Essayer d'autre effets lors du survol des photos (desaturation)
 
@@ -42,6 +42,13 @@ export class PhotoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
+
+  /* Close modal if click outside of the picture */
+  clickout(event: MouseEvent) {
+    if (document.getElementById("myModal") == event.target) {
+      this.closePhotoModal();
+    }
+  }
 
   // When a photo is hovered, blur all others by adding class "bluredPhoto"
   photoHovered(event: MouseEvent) {
@@ -87,5 +94,17 @@ export class PhotoComponent implements OnInit {
   showSlide(slideUrl: String, slideAlt: String) {
     this.currentSlideName = slideUrl;
     this.currentSlideCaption = slideAlt;
+  }
+
+  // When slide photo is hovered, caption appear
+  slideImgHovered() {
+    let captionDiv = document.getElementsByClassName("caption-container")[0] as HTMLDivElement;
+    captionDiv.style.opacity = "1";
+  }
+
+  // When slide photo is left, caption disappear
+  slideImgLeft() {
+    let captionDiv = document.getElementsByClassName("caption-container")[0] as HTMLDivElement;
+    captionDiv.style.opacity = "0";
   }
 } 

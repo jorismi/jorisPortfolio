@@ -1,19 +1,22 @@
-<ul class="photosList">
-    <li class="photoListElement" *ngFor="let photo of photos; let i = index">
-        <img class="photo" id="photoNumber{{ i }}" src="assets/photos/large/{{ photo.name }}" alt="{{ photo.alt }}"
-            loading="lazy" (click)="openPhotoModal(i)" (mouseenter)="photoHovered($event)"
-            (mouseleave)="photoLeft()">
-    </li>
-    <li class="photoListElement"></li>
-</ul>
+<div class="photoContainer">
+    <ul class="photosList">
+        <li class="photoListElement" *ngFor="let photo of photos; let i = index">
+            <img class="photo" id="photoNumber{{ i }}" src="assets/photos/large/{{ photo.name }}" alt="{{ photo.alt }}"
+                loading="lazy" (click)="openPhotoModal(i)" (mouseenter)="photoHovered($event)"
+                (mouseleave)="photoLeft()">
+        </li>
+        <li class="photoListElement"></li>
+    </ul>
+</div>
 <!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
-    <span class="close cursor" (click)="closePhotoModal()">&times;</span>
+<div id="myModal" class="modal" (clickOutside)="closePhotoModal()">
+    <span class="close cursor" (click)="closePhotoModal()"><i class="fa fa-times-circle"></i></span>
     <div class="modal-content">
 
-        <div class="currentSlide">
-            <img src="assets/photos/large/{{currentSlideName}}" style="width:100%">
-          </div>
+        <div class="imgSlideContainer">
+            <img class="imgSlide" src="assets/photos/large/{{currentSlideName}}" (mouseenter)="slideImgHovered()"
+            (mouseleave)="slideImgLeft()">
+        </div>
 
         <!-- Next/previous controls -->
         <a class="prev" (click)="changeSlide(-1)">&#10094;</a>
@@ -21,7 +24,7 @@
 
         <!-- Caption text -->
         <div class="caption-container">
-            <p id="caption">{{currentSlideCaption}}</p>
+            <h1>{{currentSlideCaption}}</h1>
         </div>
     </div>
 </div>
