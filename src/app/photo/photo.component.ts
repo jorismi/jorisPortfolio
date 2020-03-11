@@ -9,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
   },
 })
 export class PhotoComponent implements OnInit {
-  //TODO BONUS Faire apparaitre et disparaitre la fenetre modal avec un ngIf
   //TODO BONUS faire un wiggle pour les flèches quand on est tout à gauche ou a droite des slides Photos
   //TODO BONUS Essayer d'autre effets lors du survol des photos (desaturation)
 
@@ -70,16 +69,14 @@ export class PhotoComponent implements OnInit {
   }
 
   openPhotoModal(index: number) {
-    //this.showPhotoModal=true;
+    this.showPhotoModal=true;
     this.currentSlideIndex = index;
-    document.getElementById("myModal").style.display = "block";
     this.showSlide(this.photos[this.currentSlideIndex].name, this.photos[this.currentSlideIndex].alt);
   }
 
   // Close the Modal
   closePhotoModal() {
-    //this.showPhotoModal=false;
-    document.getElementById("myModal").style.display = "none";
+    this.showPhotoModal=false;
   }
 
   // Next/previous controls

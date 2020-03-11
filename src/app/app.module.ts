@@ -13,11 +13,13 @@ import { PhotoModule } from './photo/photo.module';
 import { ProjectModule } from './project/project.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './about/about/about.component';
+import { AboutExperienceFilter } from './about/about/aboutFilter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    AboutExperienceFilter
   ],
   imports: [
     FontAwesomeModule,
@@ -30,7 +32,7 @@ import { AboutComponent } from './about/about/about.component';
     SharedModule,
     PhotoModule,
     ProjectModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

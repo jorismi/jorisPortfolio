@@ -9,7 +9,7 @@
     </ul>
 </div>
 <!-- The Modal/Lightbox -->
-<div id="myModal" class="modal" (clickOutside)="closePhotoModal()">
+<div *ngIf="showPhotoModal" id="myModal" class="modal" (clickOutside)="closePhotoModal()">
     <span class="close cursor" (click)="closePhotoModal()"><i class="fa fa-times-circle"></i></span>
     <div class="modal-content">
 

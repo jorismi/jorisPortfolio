@@ -1,8 +1,9 @@
 <div class="box" [ngStyle]="{
     'width.%': getLargeurValeur()
 }">
-    <div class="filterList" >
-        <button *ngFor="let buttonFilter of buttonFilters" class="filterBtn" (click)="activateFilter($event)"> {{ buttonFilter.content }} </button>
+    <div class="filterList">
+        <button *ngFor="let buttonFilter of buttonFilters" class="filterBtn"
+            (click)="activateBtnFilter($event);filter(buttonFilter);">{{buttonFilter}}</button>
     </div>
 </div>
 <div>
@@ -11,49 +12,18 @@
 </div>
 
 <p> Valeur de la largeur : {{ largeurValeur }}</p>
-
 <div class="timeline">
-    <div class="timelineCard">
-        <div class="time">
-            <span>Juillet 2018</span>
+    <div class="timelineCard" *ngFor="let experience of experiences | aboutExperienceFilter:aboutExperienceFilterArgs">
+        <div class="dateContent">
+            <span>{{experience.date}}</span>
         </div>
-        <div class="label">
-            <h1> Angular et JS </h1>
-            <h2> Toulouse </h2>
-            <p> Super expérience en Angular et JS </p>
+        <div class="experienceContent">
+            <h1> {{experience.title}} </h1>
+            <h2> {{experience.location}} </h2>
+            <p> {{experience.description}} </p>
             <div class="filterList">
-                <button class="filterBtn" (click)="activateFilter($event)"> Angular </button>
-                <button class="filterBtn" (click)="activateFilter($event)"> JS </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="timelineCard">
-        <div class="time">
-            <span>Aout 2019</span>
-        </div>
-        <div class="label">
-            <h1> HTML et PHP</h1>
-            <h2> Toulouse </h2>
-            <p> Super expérience en HTML et PHP </p>
-            <div class="filterList">
-                <button class="filterBtn" (click)="activateFilter($event)"> HTML </button>
-                <button class="filterBtn" (click)="activateFilter($event)"> PHP </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="timelineCard">
-        <div class="time">
-            <span>Juillet 2020</span>
-        </div>
-        <div class="label">
-            <h1> Angular et NodeJS </h1>
-            <h2> Toulouse </h2>
-            <p> Super expérience en Angular et NodeJS </p>
-            <div class="filterList">
-                <button class="filterBtn" (click)="activateFilter($event)"> Angular </button>
-                <button class="filterBtn" (click)="activateFilter($event)"> NodeJS </button>
+                <button *ngFor="let experienceKeyword of experience.keywords"
+                    (click)="activateBtnFilter($event);filter(experienceKeyword)">{{experienceKeyword}}</button>
             </div>
         </div>
     </div>
