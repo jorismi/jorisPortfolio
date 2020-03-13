@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Experience } from './experience.class';
+import { Experience } from './experiences.class';
 
 @Component({
-  selector: 'jp-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  selector: 'jp-experiences',
+  templateUrl: './experiences.component.html',
+  styleUrls: ['./experiences.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class ExperiencesComponent implements OnInit {
   // TODO design experience Card
   // TODO design experience button OR fix filter system
   // TODO BONUS Add circle or other to vertical line
@@ -26,7 +26,7 @@ export class AboutComponent implements OnInit {
     new Experience("05/28/2018", "01/15/2019", "Angular", "Bordeaux", "Super expérience en Angular", ["Angular"]),
   ];
   // List of keyword which filter my experiences, if empty, display all
-  aboutExperienceFilterArgs = [];
+  experienceFilterArgs = [];
 
   constructor() { }
 
@@ -45,11 +45,11 @@ export class AboutComponent implements OnInit {
 
   filter(btnFilter, event: MouseEvent) {
     // Get into array text content of all activated button 
-    this.aboutExperienceFilterArgs = Array.from(document.getElementsByClassName("activated")).map(x => x.textContent);
+    this.experienceFilterArgs = Array.from(document.getElementsByClassName("activated")).map(x => x.textContent);
     //this.aboutExperienceFilterArgs.push(btnFilter);
-    console.log("Filter list : " + this.aboutExperienceFilterArgs);
+    console.log("Filter list : " + this.experienceFilterArgs);
     // Creating copy of filteredArgs to trigger pure pipe
-    this.aboutExperienceFilterArgs = this.aboutExperienceFilterArgs.slice();
+    this.experienceFilterArgs = this.experienceFilterArgs.slice();
   }
 
   // Toggle style 'activated' for all button

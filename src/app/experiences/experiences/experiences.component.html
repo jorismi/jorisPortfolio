@@ -6,7 +6,7 @@
 </div>
 
 <div class="timeline">
-    <div class="timelineCard" *ngFor="let experience of experiences | aboutExperienceFilter:aboutExperienceFilterArgs">
+    <div class="timelineCard" *ngFor="let experience of experiences | experienceFilter:experienceFilterArgs">
         <div class="dateContent">
             <time datetime="2014-09-20" class="expDate">
                 <em class="expDay">{{ experience.yearBeginDate }}</em>

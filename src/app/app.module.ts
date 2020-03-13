@@ -12,14 +12,14 @@ import { SharedModule } from './shared/shared.module';
 import { PhotoModule } from './photo/photo.module';
 import { ProjectModule } from './project/project.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AboutComponent } from './about/about/about.component';
-import { AboutExperienceFilter } from './about/about/aboutFilter.pipe';
+import { experienceFilter } from './experiences/experiences/experiencesFilter.pipe';
+import { ExperiencesComponent } from './experiences/experiences/experiences.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
-    AboutExperienceFilter
+    ExperiencesComponent,
+    experienceFilter
   ],
   imports: [
     FontAwesomeModule,

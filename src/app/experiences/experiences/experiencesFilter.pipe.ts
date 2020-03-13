@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Experience } from './experience.class';
+import { Experience } from './experiences.class';
 
 // Pipe used to filter my experiences
 @Pipe({
-    name: 'aboutExperienceFilter',
+    name: 'experienceFilter',
 })
-export class AboutExperienceFilter implements PipeTransform {
+export class experienceFilter implements PipeTransform {
     transform(experiences: Experience[], filter: string): any {
         // if no experiences or no filter or empty filter list, display all experiences
         if (!experiences || !filter || filter.length == 0) {
