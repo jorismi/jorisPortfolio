@@ -2,6 +2,7 @@ export class Experience {
     beginDate: string;
     endDate: string;
     title: string;
+    company: string;
     location: string;
     description: string;
     keywords: string[];
@@ -12,10 +13,11 @@ export class Experience {
     dayOfMonthBeginDate: string;
     dayOfMonthEndDate: string;
 
-    constructor(beginDate: string, endDate: string, title: string, location: string, description: string, keywords: string[]) {
+    constructor(beginDate: string, endDate: string, title: string, company: string, location: string, description: string, keywords: string[]) {
         this.beginDate = beginDate;
         this.endDate = endDate;
         this.title = title;
+        this.company = company;
         this.location = location;
         this.description = description;
         this.keywords = Array.from(keywords);

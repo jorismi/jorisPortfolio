@@ -1,3 +1,7 @@
+.filterList{
+    margin: 1rem 1rem 1rem 3rem;
+}
+
 .filterBtn, .expKeyword{
     background-color: #FFF;
     color: #c2c7d4;
@@ -15,6 +19,7 @@
 }
 
 .timeline{
+    position: relative;
     margin: 2rem;
     overflow-y:scroll;
     height:80vh;
@@ -45,6 +50,10 @@
     padding: 0 4rem 4rem 4rem;
 }
 
+.companyImg{
+    max-height: 3rem;
+}
+
 .fa-map-marker-alt  {
     margin: 0.5rem 1rem 0.5rem 0;
 }
@@ -60,10 +69,10 @@
     font-size: 1rem; /* change icon size */
     display: block;
     position: relative;
-    width: 7em;
-    height: 7em;
+    width: 7rem;
+    height: 7rem;
     background-color: #fff;
-    border-radius: 0.6em;
+    border-radius: 0.5rem;
     box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
     overflow: hidden;
 }

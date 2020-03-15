@@ -1,8 +1,6 @@
-<div>
-    <div class="filterList">
-        <button *ngFor="let buttonFilter of buttonFilters" class="filterBtn"
-            (click)="filter($event)">{{buttonFilter}}</button>
-    </div>
+<div class="filterList">
+    <button *ngFor="let buttonFilter of buttonFilters" class="filterBtn"
+        (click)="filter($event)">{{buttonFilter}}</button>
 </div>
 <div class="timeline">
     <div class="timelineCard" *ngFor="let experience of experiences | experienceFilter:experienceFilterArgs">
@@ -22,10 +20,10 @@
         <div class="expVerticalLine"></div>
         <div class="experienceContent">
             <h1> {{experience.title}} </h1>
-            <h2> <img src="assets/photos/experiencesImages/adonia.png">{{experience.location}} </h2>
+            <h2> <img class="companyImg" src="assets/experiencesImages/{{experience.company}}.png"></h2>
             <h3> <i class="fas fa-map-marker-alt"></i>{{experience.location}} </h3>
             <p> {{experience.description}} </p>
-            <div class="filterList">
+            <div>
                 <span class="expKeyword" [ngClass]="{'keywordActivated' : activateKeyword(experienceKeyword)}"
                     *ngFor="let experienceKeyword of experience.keywords">{{experienceKeyword}}</span>
             </div>
