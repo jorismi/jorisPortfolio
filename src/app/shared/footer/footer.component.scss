@@ -191,12 +191,12 @@ $gradient      : #000000;
         }
         
         &:hover i {
-            @include transformScale(2);
+            @include transformScale(1.5);
             //border: 2px solid green;
             //color: $iconColor;
             color: black;
             //background: -webkit-linear-gradient(45deg, $iconColor, $accent);
-            background:black;
+            background:white;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
