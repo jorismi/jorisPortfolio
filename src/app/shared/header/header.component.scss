@@ -6,13 +6,12 @@
 }
 
 .logo{
-	font-size: 3em;
+	font-size: 3rem;
 }
 
 .navbar {
-	border-radius : 8px;
-	background: linear-gradient(to right, #eeaeca, #94bbe9);
-	
+	border-radius : 1rem;
+	background: linear-gradient(to right, #94bbe9, #eeaeca);
 }
 
 .navbar .fa, .link, a, .navbar span{
@@ -22,16 +21,16 @@
 .navbar .nav li > a {
 	width: auto;
 	background: transparent !important;
-	font-size: 30px;
-	transition: 0.2s ease-in-out;
+	font-size: 2rem;
+	transition: 0.5s ease-in-out;
 	&:hover{
 		background-color: rgba(255,255,255,0.2);
-		font-size: 20px;
+		font-size: 1.8rem;
 		.link {
 			width: 100%;
-			padding: 0 10px 0 20px;
+			padding: 0 0 0 1rem;
 			visibility: visible; 
-			font-size: 25px;
+			font-size: 2rem;
 		}
 	}
 }
@@ -39,7 +38,12 @@
 .navbar .link {
 	width: 0;
 	font-family: 'Roboto', sans-serif;
-	transition: 0.2s ease-in-out;
+	transition: 0.5s ease-in-out;
 	visibility: hidden;
 	font-size: 0px;
 }
+
+.navItem{
+	margin: 0 1rem 0 1rem;
+}
+

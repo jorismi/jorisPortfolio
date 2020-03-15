@@ -6,14 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  // TODO BONUS Use ngFor to construct HTML
+  // TODO BONUS Get rid of bootstrap
   constructor() { }
 
   ngOnInit() {
   }
-
-  changeColor() {
-    alert("hello");
-  }
-
 }
