@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PhotoComponent } from './photo/photo.component';
 import { ProjectComponent } from './project/project.component';
-import { ExperiencesComponent } from './experiences/experiences/experiences.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
 
 const routes: Routes = [
   { path: 'photo', component: PhotoComponent },

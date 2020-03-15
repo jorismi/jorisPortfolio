@@ -12,8 +12,8 @@ import { SharedModule } from './shared/shared.module';
 import { PhotoModule } from './photo/photo.module';
 import { ProjectModule } from './project/project.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { experienceFilter } from './experiences/experiences/experiencesFilter.pipe';
-import { ExperiencesComponent } from './experiences/experiences/experiences.component';
+import { experienceFilter } from './experiences/experiencesFilter.pipe';
+import { ExperiencesComponent } from './experiences/experiences.component';
 
 @NgModule({
   declarations: [

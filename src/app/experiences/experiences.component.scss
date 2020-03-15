@@ -45,6 +45,10 @@
     padding: 0 4rem 4rem 4rem;
 }
 
+.fa-map-marker-alt  {
+    margin: 0.5rem 1rem 0.5rem 0;
+}
+
 .expKeyword{
     user-select: none;
     margin: 0 0.5rem 0 0.5rem;
@@ -53,7 +57,7 @@
 
 .expDate{
     user-select: none;
-    font-size: 1.5rem; /* change icon size */
+    font-size: 1rem; /* change icon size */
     display: block;
     position: relative;
     width: 7em;
@@ -96,7 +100,7 @@
 }
 
 .expDateArrow{
-    font-size:8rem;
+    font-size:5rem;
     background: -webkit-linear-gradient(#ff97cb, #5e65af);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
