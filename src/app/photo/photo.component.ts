@@ -12,8 +12,8 @@ export class PhotoComponent implements OnInit {
   //TODO BONUS faire un wiggle pour les flèches quand on est tout à gauche ou a droite des slides Photos
   //TODO BONUS Essayer d'autre effets lors du survol des photos (desaturation)
 
-  currentSlideName: String;
-  currentSlideCaption: String;
+  currentSlideName: string;
+  currentSlideCaption: string;
   currentSlideIndex: number = 0;
   showPhotoModal: boolean = false;
   photos = [
@@ -88,7 +88,7 @@ export class PhotoComponent implements OnInit {
     }
   }
 
-  showSlide(slideUrl: String, slideAlt: String) {
+  showSlide(slideUrl: string, slideAlt: string) {
     this.currentSlideName = slideUrl;
     this.currentSlideCaption = slideAlt;
   }

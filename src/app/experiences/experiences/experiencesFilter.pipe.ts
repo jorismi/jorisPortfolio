@@ -6,7 +6,7 @@ import { Experience } from './experiences.class';
     name: 'experienceFilter',
 })
 export class experienceFilter implements PipeTransform {
-    transform(experiences: Experience[], filter: string): any {
+    transform(experiences: Experience[], filter: string[]): any {
         // if no experiences or no filter or empty filter list, display all experiences
         if (!experiences || !filter || filter.length == 0) {
             return experiences;

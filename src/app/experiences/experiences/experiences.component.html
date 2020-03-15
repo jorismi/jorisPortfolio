@@ -1,7 +1,7 @@
 <div>
     <div class="filterList">
         <button *ngFor="let buttonFilter of buttonFilters" class="filterBtn"
-            (click)="activateBtnFilter($event);filter(buttonFilter);">{{buttonFilter}}</button>
+            (click)="filter($event)">{{buttonFilter}}</button>
     </div>
 </div>
 <div class="timeline">

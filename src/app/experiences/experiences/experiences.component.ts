@@ -8,13 +8,11 @@ import { Experience } from './experiences.class';
 })
 export class ExperiencesComponent implements OnInit {
   // TODO design experience Card
-  // TODO design experience button OR fix filter system
   // TODO BONUS Add circle or other to vertical line
-  // TODO BONUS Fix activating the filter buttons directly into experience
-  // TODO BONUS Find a better way of comparing filterButton, with something else than innerHTML
+  // TODO BONUS Make expereienceKeyword clickable to filter
 
   // List of available filter
-  buttonFilters: String[] = ["Angular", "HTML", "NodeJS", "CSS", "JS", "PHP", "JamaisVu"];
+  buttonFilters: string[] = ["Angular", "HTML", "NodeJS", "CSS", "JS", "PHP", "JamaisVu"];
   // List of my experiences
   // Date is in american format MM/DD/YYYY
   experiences = [
@@ -26,13 +24,15 @@ export class ExperiencesComponent implements OnInit {
     new Experience("05/28/2018", "01/15/2019", "Angular", "Bordeaux", "Super expérience en Angular", ["Angular"]),
   ];
   // List of keyword which filter my experiences, if empty, display all
-  experienceFilterArgs = [];
+  experienceFilterArgs: string[] = [];
 
   constructor() { }
 
   ngOnInit() { }
 
-  filter(btnFilter, event: MouseEvent) {
+  filter(event: MouseEvent) {
+    let buttonClicked = event.currentTarget as HTMLButtonElement;
+    buttonClicked.classList.toggle("activated");
     // Get into array text content of all activated button 
     this.experienceFilterArgs = Array.from(document.getElementsByClassName("activated")).map(x => x.textContent);
     // Creating copy of filteredArgs to trigger pure pipe
@@ -42,16 +42,5 @@ export class ExperiencesComponent implements OnInit {
   // Activate en experience keyword if it's into the filterList
   activateKeyword(expKeyword: string) {
     return this.experienceFilterArgs.includes(expKeyword);
-  }
-
-  // Toggle style 'activated' for all button
-  activateBtnFilter(event: MouseEvent) {
-    let buttonClicked = event.currentTarget as HTMLButtonElement;
-    var filterButtons = document.getElementsByClassName("filterBtn");
-    for (var i = 0; i < filterButtons.length; i++) {
-      if (buttonClicked.innerHTML.trim() == filterButtons[i].innerHTML.trim()) {
-        filterButtons[i].classList.toggle("activated");
-      }
-    }
   }
 }
