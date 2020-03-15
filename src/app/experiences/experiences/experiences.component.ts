@@ -30,26 +30,18 @@ export class ExperiencesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    let newDate = new Date(this.experiences[0].beginDate);
-    console.log(newDate);
-    console.log(new Intl.DateTimeFormat('fr-FR', { weekday: 'long' }).format(new Date(this.experiences[0].beginDate)));
-    console.log(new Intl.DateTimeFormat('fr-FR', { month: 'long' }).format(new Date(this.experiences[0].beginDate)));
-    /*let current_date = new Date()
-    let cday = current_date.getDate()
-    console.log(current_date);
-
-    console.log("The day of the week of current date is : " + cday)
-    console.log(new Intl.DateTimeFormat('fr-FR', { weekday: 'long' }).format());*/
-  }
+  ngOnInit() { }
 
   filter(btnFilter, event: MouseEvent) {
     // Get into array text content of all activated button 
     this.experienceFilterArgs = Array.from(document.getElementsByClassName("activated")).map(x => x.textContent);
-    //this.aboutExperienceFilterArgs.push(btnFilter);
-    console.log("Filter list : " + this.experienceFilterArgs);
     // Creating copy of filteredArgs to trigger pure pipe
     this.experienceFilterArgs = this.experienceFilterArgs.slice();
+  }
+
+  // Activate en experience keyword if it's into the filterList
+  activateKeyword(expKeyword: string) {
+    return this.experienceFilterArgs.includes(expKeyword);
   }
 
   // Toggle style 'activated' for all button

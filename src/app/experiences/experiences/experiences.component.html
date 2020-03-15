@@ -4,7 +4,6 @@
             (click)="activateBtnFilter($event);filter(buttonFilter);">{{buttonFilter}}</button>
     </div>
 </div>
-
 <div class="timeline">
     <div class="timelineCard" *ngFor="let experience of experiences | experienceFilter:experienceFilterArgs">
         <div class="dateContent">
@@ -19,18 +18,15 @@
                 <strong class="expMonth">{{ experience.monthEndDate}}</strong>
                 <span class="expNumberDay">{{experience.dayOfMonthEndDate}}</span>
             </time>
-
-                <!--<span>{{experience.beginDate}}</span>
-                 <span>{{experience.endDate}}</span> <------>
         </div>
         <div class="expVerticalLine"></div>
         <div class="experienceContent">
             <h1> {{experience.title}} </h1>
-            <h2> <i class="fa fa-map-marker"></i> {{experience.location}} </h2>
+            <h2> <i class="fas fa-map-marker-alt"></i>{{experience.location}} </h2>
             <p> {{experience.description}} </p>
             <div class="filterList">
-                <button *ngFor="let experienceKeyword of experience.keywords"
-                    (click)="activateBtnFilter($event);filter(experienceKeyword)">{{experienceKeyword}}</button>
+                <span class="expKeyword" [ngClass]="{'keywordActivated' : activateKeyword(experienceKeyword)}"
+                    *ngFor="let experienceKeyword of experience.keywords">{{experienceKeyword}}</span>
             </div>
         </div>
     </div>

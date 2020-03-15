@@ -1,11 +1,4 @@
-.box{
-    border: 2px solid black;
-    min-width: 10%;
-    max-width: 100%;
-    padding: 0.5rem;
-}
-
-.filterBtn{
+.filterBtn, .expKeyword{
     background-color: #FFF;
     color: #c2c7d4;
     border: 2px #c2c7d4 solid;
@@ -14,16 +7,11 @@
     outline: none;
 }
 
-.filterBtn:hover, .activated{
+.filterBtn:hover, .activated, .keywordActivated{
     background-color: #77d1d2;
     color: #FFF;
     border: 2px #c2c7d4 solid;
     outline: none;
-}
-
-::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* just make scrollbar invisible */
 }
 
 .timeline{
@@ -32,14 +20,15 @@
     height:80vh;
 }
 
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* just make scrollbar invisible */
+}
+
 .timelineCard{
     max-width: 150%;
     display: flex;
 }
-
-/*.timelineCard > div{
-    padding: 2rem;
-}*/
 
 .dateContent{
     padding: 3rem 2rem 2rem 2rem;
@@ -47,7 +36,6 @@
 }
 
 .expVerticalLine {
-    //border-left: 0.5rem solid blue;
     min-height: 100%;
     min-width: 1rem;
     background: linear-gradient(#eeaeca, #94bbe9, #eeaeca);
@@ -56,9 +44,15 @@
 .experienceContent{
     padding: 0 4rem 4rem 4rem;
 }
-  
+
+.expKeyword{
+    user-select: none;
+    margin: 0 0.5rem 0 0.5rem;
+    padding: 0.5rem;
+}
+
 .expDate{
-user-select: none;
+    user-select: none;
     font-size: 1.5rem; /* change icon size */
     display: block;
     position: relative;
