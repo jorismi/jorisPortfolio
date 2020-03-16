@@ -21,13 +21,6 @@
 .timeline{
     position: relative;
     margin: 2rem;
-    overflow-y:scroll;
-    height:80vh;
-}
-
-::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* just make scrollbar invisible */
 }
 
 .timelineCard{

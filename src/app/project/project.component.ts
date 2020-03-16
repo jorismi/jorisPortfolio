@@ -6,7 +6,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./project.component.scss']
 })
 
-// TODO regler le problème de l'apparition de plusieurs scroll à droite, lors des aller-retours sur la page projet
+// TODO remake all project page!!
 export class ProjectComponent implements OnInit, OnDestroy {
 
   constructor() {

@@ -1,12 +1,3 @@
-.photoContainer{
-    overflow-y:scroll;
-    height:80vh;
-}
-
-::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* just make scrollbar invisible */
-}
 
 .photosList {
     list-style: none;
