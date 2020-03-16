@@ -29,14 +29,11 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/multiscroll.js/dist/jquery.multiscroll.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/multiscroll.js/vendors/jquery.easings.min.js",
-              "node_modules/multiscroll.js/dist/jquery.multiscroll.min.js"
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
