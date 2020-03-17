@@ -6,20 +6,61 @@
     position: relative;
 }
 
-.cutoutHomePageText{
-    background-color: white;
-    color: black;
-    font-size: 5vw; /* Responsive font size */
+.allSkillContainer{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.skillContainer {
+    background-color: #ddd;
+    height: 2rem;
+    margin: 1rem;
+}
+
+.skillText{
+    display: inline-block;
+    background-color: lightblue;
+    text-align: center;
+    vertical-align: top;
+    min-height: 100%;
+    line-height: 2rem;
     font-weight: bold;
-    margin: 0 auto; /* Center the text container */
-    padding: 10px;
+}
+
+.skillName{
+    min-width: 20%;
+}
+
+.skillPercentValue{
+    min-width: 10%;
+    float:right;
+}
+
+.skill{
+    vertical-align: top;
+    display: inline-block;
+    min-width: 70%;
+    min-height: 100%;
+    color: white;
+    background-color: #4CAF50;
+}
+
+
+.foregroundHomePageText{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
+    font-size: 5vw;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
     width: 50%;
-    text-align: center; /* Center text */
-    position: absolute; /* Position text */
-    top: 50%; /* Position text in the middle */
-    left: 50%; /* Position text in the middle */
-    transform: translate(-50%, -50%); /* Position text in the middle */
-    mix-blend-mode: screen; /* This makes the cutout text possible */
+    padding: 2rem;
+    text-align: center;
 }
 
 .cutoutHobbiesText {
@@ -28,7 +69,7 @@
     font-size: 10vw; /* Responsive font size */
     font-weight: bold;
     margin: 0 auto; /* Center the text container */
-    padding: 10px;
+    padding: 1rem;
     width: 50%;
     text-align: center; /* Center text */
     position: absolute; /* Position text */
@@ -42,7 +83,7 @@
     min-height: 125%; 
     background-image: url("../../assets/welcomeImages/Laponie-0147.png");
     opacity: 0.95;
-    filter: saturate(70%);
+    filter: blur(0.3rem) saturate(70%);
 }
 
 .personnalProjectSection{

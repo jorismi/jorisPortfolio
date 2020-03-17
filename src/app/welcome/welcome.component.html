@@ -1,19 +1,13 @@
-<div class="parallax homePageSection">
-    <div class="cutoutHomePageText">Joris <br/> Développeur web</div>
-    <div class="homePageTextContainer">
-        
-        <!--<div class="homePageText"> Bonjour, </div>
-        <div class="homePageText"> moi c'est Joris </div>-->
-    </div>
-</div>
+<div class="parallax homePageSection"></div>
+<div class="foregroundHomePageText">Joris <br /> Développeur web</div>
+
 <div class="homeSkillContainer">
-    <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat iaculis enim eget sollicitudin. Etiam
-            aliquet congue nibh, vitae blandit velit accumsan sit amet. Sed molestie condimentum ligula vel varius.
-            Vivamus nibh elit, tincidunt a semper quis, efficitur nec felis. Vivamus elementum lacinia lorem non
-            vulputate. Nam lectus eros, vulputate ac nisl non, accumsan iaculis purus. Phasellus fermentum velit in
-            dapibus tempus. Mauris tortor odio, lobortis vitae ultricies mollis, tempor quis neque. Donec mollis purus
-            nisl, eu fringilla orci rutrum a </p>
+    <div class="allSkillContainer">
+        <div class="skillContainer" *ngFor="let skill of skills">
+            <div class="skillText skillName">{{skill.skillName}}</div>
+            <div class="skill" [ngStyle]="{'min-width.%': getSkillPercentageValue(skill)}"></div>
+            <div class="skillText skillPercentValue">{{skill.skillPercentValue}}</div>
+        </div>
     </div>
 </div>
 <div class="parallax personnalProjectSection">

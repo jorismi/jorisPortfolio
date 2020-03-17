@@ -9,9 +9,8 @@ import { Experience } from './experiences.class';
 export class ExperiencesComponent implements OnInit {
   // TODO design experience Card
   // TODO Fix the end of timeline experience which is cut sometimes
-  // TODO BONUS Add circle or other to vertical line
+  // TODO BONUS Add circle or other to vertical line (=> https://www.w3schools.com/howto/howto_css_timeline.asp)
   // TODO BONUS Make expereienceKeyword clickable to filter
-
   // List of available filter
   buttonFilters: string[] = ["Angular", "HTML", "NodeJS", "CSS", "JS", "PHP", "JamaisVu","HTML", "NodeJS", "CSS", "JS", "PHP","HTML", "NodeJS", "CSS", "JS", "PHP","HTML", "NodeJS", "CSS", "JS", "PHP","HTML", "NodeJS", "CSS", "JS", "PHP","HTML", "NodeJS", "CSS", "JS", "PHP","HTML", "NodeJS", "CSS", "JS", "PHP","HTML", "NodeJS", "CSS", "JS", "PHP","HTML", "NodeJS", "CSS", "JS", "PHP","HTML", "NodeJS", "CSS", "JS", "PHP","HTML", "NodeJS", "CSS", "JS", "PHP",];
   // List of my experiences
