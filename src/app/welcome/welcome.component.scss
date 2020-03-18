@@ -6,15 +6,45 @@
     position: relative;
 }
 
+.mySkills{
+    text-align: center;
+    padding: 2rem;
+    text-decoration: underline overline double #94bbe9;
+}
+
 .allSkillContainer{
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
+}
+
+.skillBadge{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.skillBadge > .fas{
+    font-size: 5rem;
+    padding: 2rem;
+    background-color: #94bbe9;
+    color: white;
+}
+
+.skillBadge > .fas:hover{
+    color: white;
 }
 
 .skillContainer {
     background-color: #ddd;
     height: 2rem;
     margin: 1rem;
+    transition: transform 1.5s ease-in-out, opacity 2s ease-in-out;
+    opacity: 0;
+    transform: translateX(-500%);
+}
+
+.skillContainerActivated{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .skillText{
@@ -39,12 +69,13 @@
 .skill{
     vertical-align: top;
     display: inline-block;
-    min-width: 70%;
+    width: 0%;
+    max-width: 70%;
     min-height: 100%;
     color: white;
     background-color: #4CAF50;
+    transition: width 3s ease-in-out 1s;
 }
-
 
 .foregroundHomePageText{
     background-color: rgb(0,0,0); /* Fallback color */
