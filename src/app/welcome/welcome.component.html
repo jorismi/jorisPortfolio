@@ -1,26 +1,6 @@
 <div id="homePageSection" class="parallax homePageSection"></div>
 <div class="foregroundHomePageText">Joris <br /> Développeur web</div>
-<div class="homeSkillContainer">
-    <h1 class="mySkills">Mes compétences</h1>
-    <div class="allSkillContainer" id="allSkillContainer">
-        <div class="skillBadge">
-            <i class="fas fa-code"></i>
-        </div>
-        <div class="skillBadge"><i class="fas fa-palette"></i></div>
-        <div class="skillBadge"><i class="fas fa-football-ball"></i></div>
-        <div class="skillContainer" [ngClass]="{'skillContainerActivated' : skillVisible}" *ngFor="let skill of skills">
-            <div class="skillText skillName">{{skill.skillName}}</div>
-            <div class="skill" [ngClass]="{'skillActivated' : skillVisible}"></div>
-            <div class="skillText skillPercentValue">{{skill.skillPercentValue}}</div>
-        </div>
-    </div>
-</div>
-<div class="parallax personnalProjectSection">
-    <div class="personnalProjectTextContainer">
-        <div class="personnalProjectText"> Voir mes projets perso </div>
-    </div>
-</div>
-<div class="homeSkillContainer">
+<div class="homePageTextContainer aboutMeContainer">
     <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat iaculis enim eget sollicitudin. Etiam
             aliquet congue nibh, vitae blandit velit accumsan sit amet. Sed molestie condimentum ligula vel varius.
@@ -28,6 +8,19 @@
             vulputate. Nam lectus eros, vulputate ac nisl non, accumsan iaculis purus. Phasellus fermentum velit in
             dapibus tempus. Mauris tortor odio, lobortis vitae ultricies mollis, tempor quis neque. Donec mollis purus
             nisl, eu fringilla orci rutrum a </p>
+    </div>
+</div>
+<div class="homePageTextContainer homeSkillContainer">
+    <h1 class="mySkills">Mes compétences</h1>
+    <div class="allSkillContainer" id="allSkillContainer">
+        <i class="fas fa-code skillBadge" [ngClass]="{'skillBadgeActivated' : skillVisible}"></i>
+        <i class="fas fa-palette skillBadge" [ngClass]="{'skillBadgeActivated' : skillVisible}"></i>
+        <i class="fas fa-football-ball skillBadge" [ngClass]="{'skillBadgeActivated' : skillVisible}"></i>
+        <div class="skillContainer" [ngClass]="{'skillContainerActivated' : skillVisible}" *ngFor="let skill of skills">
+            <div class="skillText skillName">{{skill.skillName}}</div>
+            <div class="skill" [ngClass]="{'skillActivated' : skillVisible}"></div>
+            <div class="skillText skillPercentValue">{{skill.skillPercentValue}}%</div>
+        </div>
     </div>
 </div>
 <div class="parallax hobbiesSection">
