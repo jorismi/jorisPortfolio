@@ -13,6 +13,13 @@
     text-align: justify;
 }
 
+.homePageSection{
+    min-height: 125%; 
+    background-image: url("../../assets/welcomeImages/Laponie-0147.png");
+    opacity: 0.95;
+    filter: blur(0.3rem) saturate(70%);
+}
+
 .foregroundHomePageText{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
@@ -136,13 +143,13 @@
     background-color:#F5F5F5;
 }
 
-.mySkills{
+.homePageTitle{
     text-align: center;
     margin-bottom: 3rem;
     text-decoration: underline overline double #05C2C9;
 }
 
-.allSkillContainer{
+.allHomeSkillContainer{
     display: grid;
     grid-template-columns: repeat(3, auto);
 }
@@ -225,14 +232,97 @@
     mix-blend-mode: screen; /* This makes the cutout text possible */
   }
 
-.homePageSection{
-    min-height: 125%; 
-    background-image: url("../../assets/welcomeImages/Laponie-0147.png");
-    opacity: 0.95;
-    filter: blur(0.3rem) saturate(70%);
+
+.allHomeProjectContainer{
+    //border: 2px solid black;
+    display: flex;
 }
 
-.personnalProjectSection{
+.homeSkewedProjectContainer {
+    backface-visibility: hidden;
+    transform: skew(-16deg, 0);
+    overflow:hidden;
+    max-width:20rem;
+    max-height: 30rem;
+    position:relative;
+    left:10rem;
+}
+
+.homeSkewedProjectContainer:hover .timePlankHomeImg{
+    max-width:140%;
+}
+
+.homeSkewedProjectContainer:hover .timePlankForegroundText{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(48, 48, 48, 0.8); /* color w/opacity/see-through */
+    color: white; 
+    border: 3px solid #f1f1f1;
+}
+
+.homeSkewedProjectContainer:hover .fairDrawHomeImg{
+    max-width:150%;
+}
+
+.homeSkewedProjectContainer:hover .fairDrawForegroundText{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(212, 212, 212, 0.8); /* color w/opacity/see-through */
+    color: black; 
+    border: 3px solid black;
+}
+
+.timePlankHomeContainer{
+    background-color: black;
+}
+
+.fairDrawHomeContainer{
+    background-color: #F8E4AF;
+}
+
+.homeSkewProjectImg {
+    transform: skew(16deg, 0);
+    transition: all 0.5s ease-in-out;
+}
+
+.timePlankHomeImg{
+    max-width:130%;
+}
+
+.fairDrawHomeImg{
+    max-width:145%;
+}
+
+.foregroundHomeProjectText{
+    font-size: 2vw;
+    font-weight: bold;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    transform: skew(16deg, 0);
+    user-select: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.fairDrawForegroundText{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.8); /* color w/opacity/see-through */
+    color: white; 
+    border: 3px solid #f1f1f1;
+}
+
+.timePlankForegroundText{
+    background-color: rgb(255, 255, 255); /* Fallback color */
+    background-color: rgb(255, 255, 255, 0.8); /* color w/opacity/see-through */
+    color: black; 
+    border: 3px solid #f1f1f1;
+}
+
+/*.personnalProjectSection{
     min-height: 80%; 
     background-image: url("../../assets/photos/large/Laponie-0173.jpg");
 }
@@ -240,4 +330,4 @@
 .hobbiesSection{
     min-height: 100%; 
     background-image: url("../../assets/photos/large/Laponie-0247.jpg");
-}
+}*/

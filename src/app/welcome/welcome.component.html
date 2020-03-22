@@ -1,14 +1,19 @@
 <div id="homePageSection" class="parallax homePageSection"></div>
-<div class="foregroundHomePageText"><span class="aboutMeJorisText">Joris</span><br /><span class="aboutMeWebDevText">Développeur web</span></div>
+<div class="foregroundHomePageText">
+    <span class="aboutMeJorisText">Joris</span>
+    <br />
+    <span class="aboutMeWebDevText">Développeur web</span>
+</div>
 <div class="homePageTextContainer aboutMeContainer">
     <div class="aboutMeText">
-        <p>Bonjour, actuellement dévelopeur logiciel à Toulouse, je profite de mon immigration au Québec pour m'orienter vers le développement web.
-        <br />C'est pourquoi j'ai créé ce portfolio afin de me former aux technologies du web.   </p>
+        <p>Bonjour, actuellement dévelopeur logiciel à Toulouse, je profite de mon immigration au Québec pour m'orienter
+            vers le développement web.
+            <br />C'est pourquoi j'ai créé ce portfolio afin de me former aux technologies du web. </p>
     </div>
 </div>
 <div class="homePageTextContainer homeSkillContainer">
-    <h1 class="mySkills">Mes compétences</h1>
-    <div class="allSkillContainer" id="allSkillContainer">
+    <h1 class="homePageTitle">Mes compétences</h1>
+    <div class="allHomeSkillContainer" id="allHomeSkillContainer">
         <i class="fas fa-code skillBadge" [ngClass]="{'skillBadgeActivated' : skillVisible}"></i>
         <i class="fas fa-palette skillBadge" [ngClass]="{'skillBadgeActivated' : skillVisible}"></i>
         <i class="fas fa-football-ball skillBadge" [ngClass]="{'skillBadgeActivated' : skillVisible}"></i>
@@ -19,9 +24,27 @@
         </div>
     </div>
 </div>
-<div class="parallax hobbiesSection">
-    <div class="cutoutHobbiesText">Loisirs</div>
-    <div class="hobbiesTextContainer">
-        <div class="hobbiesText"> Voir mes hobbies </div>
+<div class="homePageTextContainer homeProjectContainer">
+    <h1 class="homePageTitle">Mes projets</h1>
+    <div class="allHomeProjectContainer">
+        <div class="homeSkewedProjectContainer timePlankHomeContainer">
+            <img class="homeSkewProjectImg timePlankHomeImg" src="assets/projectImages/gym1.png" />
+            <div class="foregroundHomeProjectText timePlankForegroundText">
+                <span>TimePlank</span>
+            </div>
+        </div>
+        <div class="homeSkewedProjectContainer fairDrawHomeContainer">
+            <img class="homeSkewProjectImg fairDrawHomeImg" src="assets/projectImages/fairDraw7.jpg" />
+            <div class="foregroundHomeProjectText fairDrawForegroundText">
+                <span>FairDraw</span>
+            </div>
+        </div>
     </div>
 </div>
+
+<!--<div class="parallax hobbiesSection">
+    <div class="cutoutHobbiesText">Loisirs</div>
+    <div class="hobbiesTextContainer">
+        <div class="hobbiesText"></div>
+    </div>
+</div>-->

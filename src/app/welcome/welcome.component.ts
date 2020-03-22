@@ -45,7 +45,7 @@ export class WelcomeComponent implements OnInit {
     console.log(document.getElementById("allSkillContainer").getBoundingClientRect().top);
     console.log(document.getElementById("homePageSection").getBoundingClientRect().bottom);*/
     console.log(document.getElementById("homePageSection").getBoundingClientRect().bottom-window.innerHeight);
-    document.getElementById("allSkillContainer").getBoundingClientRect().bottom - document.getElementById("homePageSection").offsetHeight
+    document.getElementById("allHomeSkillContainer").getBoundingClientRect().bottom - document.getElementById("homePageSection").offsetHeight
     if (document.getElementById("homePageSection").getBoundingClientRect().bottom-window.innerHeight < 0) {
       this.skillVisible = true;
       let skillsJauge = document.getElementsByClassName("skill");
