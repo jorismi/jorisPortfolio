@@ -27,7 +27,7 @@
 <div class="homePageTextContainer homeProjectContainer">
     <h1 class="homePageTitle">Mes projets</h1>
     <div class="allHomeProjectContainer">
-        <div class="homeSkewedProjectContainer timePlankHomeContainer">
+        <div (click)="openProjectModal()" class="homeSkewedProjectContainer timePlankHomeContainer">
             <img class="homeSkewProjectImg timePlankHomeImg" src="assets/projectImages/gym1.png" />
             <div class="foregroundHomeProjectText timePlankForegroundText">
                 <span>TimePlank</span>
@@ -42,9 +42,15 @@
     </div>
 </div>
 
-<!--<div class="parallax hobbiesSection">
-    <div class="cutoutHobbiesText">Loisirs</div>
-    <div class="hobbiesTextContainer">
-        <div class="hobbiesText"></div>
+<div id="projectModal" class="projectModal">
+    <div class="projectModalContent">
+        <div class="projectImgSlideshow">
+            <img src="assets/welcomeImages\projectScreenShot\TimePlank\timePlank1.png">
+        </div>
+        <h1>John Doe</h1>
+        <p class="title">CEO & Founder, Example</p>
+        <p>Harvard University</p>
+        <a class="linkToProjectSrc" href="#"><i class="ProjectSrcIcon fab fa-android"></i> </a>
+        <a class="linkToProjectSrc" href="#"><i class="ProjectSrcIcon fab fa-github"></i> </a>
     </div>
-</div>-->
+</div>
