@@ -323,7 +323,7 @@
 }
 
 .projectModal {
-    //display: none; /* Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -336,43 +336,37 @@
 }
   
 .projectModalContent {
-    max-width: 30vw; 
+    max-width: 70vw; 
     margin: auto;
     margin-top: 25vh;
     transform: translateY(-25%);
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: white;
-    padding: 2rem;
+    padding: 1rem 0 2rem 0;
 }
   
-.projectImgSlideshow > img {
-    width: 100%;
-    max-height: 50vh;
+.mobileProjectImgSlideshow > img {
+    max-width: 100%;
+    max-height: 60vh;
+    margin: 0.1rem;
 }
 
-.title {
+.ionic{
+	width: 8em;
+	height: 3em;
+	margin: 0 0 1em 0;
+}
+
+.typeScript{
+	width: 5em;
+	height: 3em;
+	border-radius: 25%;
+}
+
+.projectModalTitle {
     color: grey;
-    font-size: 18px;
-}
-
-button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
+    font-size: 1.5rem;
 }
 
 .linkToProjectSrc{
@@ -380,6 +374,7 @@ a {
     border-radius: 1rem;
     background-color: black;
     padding : 0.5rem;
+    font-size: 1.5rem;
 }
 
 .linkToProjectSrc:hover{
@@ -388,7 +383,74 @@ a {
 
 .ProjectSrcIcon{
     font-size: 2rem;
-    //padding : 0 0 2rem 0;
     color: white;
 }
 
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+  
+  /* Hide the images by default */
+.mySlides {
+    display: none;
+    padding: 0 2rem 0 2rem;
+}
+  
+  /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.6s ease;
+    user-select: none;
+    padding: 0.5rem;
+}
+  
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+  
+.prev {
+    left: 0;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+  /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.projectImgSlideshowFade {
+    animation-name: projectImgSlideshowFade;
+    animation-duration: 2s;
+}
+  
+@keyframes projectImgSlideshowFade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}

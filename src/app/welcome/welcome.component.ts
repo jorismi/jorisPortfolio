@@ -22,9 +22,8 @@ export function debounce(delay: number = 100): MethodDecorator {
 })
 
 export class WelcomeComponent implements OnInit {
-  // TODO Project section: finish design of modal
-  // TODO Project section : make img keep ratio
   // TODO Project section: make slideshow img
+  // TODO Project section: make photo section (cutout text)
   // TODO BONUS Make Contact section
   // TODO BONUS remake skill grid to accept various number of row for each column
   // TODO BONUS add down arrow shape at welcome div
@@ -38,10 +37,12 @@ export class WelcomeComponent implements OnInit {
   { skillName: "Angular", skillPercentValue: "65" }, { skillName: "Lightroom", skillPercentValue: "90" }, { skillName: "Photographie", skillPercentValue: "70" },
   { skillName: "Java/C++", skillPercentValue: "80" }, { skillName: "Photoshop", skillPercentValue: "40" }, { skillName: "Montage", skillPercentValue: "85" }];
 
-  ngOnInit() { }
-
   skillVisible: boolean = false;
   skillNamePlusSkillPercentValueWidth = 30;
+  currentModal: string;
+  slideIndex: number = 1;
+
+  ngOnInit() {}
 
   @HostListener('window:scroll', ['$event'])
   @debounce()
@@ -65,8 +66,10 @@ export class WelcomeComponent implements OnInit {
     return skill.skillPercentValue;
   }
 
-  openProjectModal() {
-    let modal = document.getElementById("projectModal");
+  openProjectModal(idProjectModal: string) {
+    this.showSlides(this.slideIndex);
+    this.currentModal = idProjectModal;
+    let modal = document.getElementById(this.currentModal);
     modal.style.display = "block";
     // to prevent scroll of background
     document.body.style.overflow = "hidden";
@@ -74,15 +77,44 @@ export class WelcomeComponent implements OnInit {
 
   /* Close projectModal if click outside of the modal */
   clickout(event: MouseEvent) {
-    if (document.getElementById("projectModal") == event.target) {
+    if (document.getElementById(this.currentModal) == event.target) {
       this.closeProjectModal();
     }
   }
 
   closeProjectModal() {
-    let modal = document.getElementById("projectModal");
+    let modal = document.getElementById(this.currentModal);
     modal.style.display = "none";
     // to re-enable scroll of background
     document.body.style.overflow = "auto";
+    this.currentModal = "";
+  }
+
+  // Next/previous controls
+  plusSlides(n) {
+    this.showSlides(this.slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  currentSlide(n) {
+    this.showSlides(this.slideIndex = n);
+  }
+
+  showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { this.slideIndex = 1 }
+    if (n < 1) { this.slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      let currentSlide = slides[i] as HTMLElement;
+      currentSlide.style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    let currentSlide = slides[this.slideIndex - 1] as HTMLElement;
+    currentSlide.style.display = "block";
+    dots[this.slideIndex - 1].className += " active";
   }
 }

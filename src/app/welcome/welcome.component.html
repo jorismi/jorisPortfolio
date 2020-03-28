@@ -27,13 +27,13 @@
 <div class="homePageTextContainer homeProjectContainer">
     <h1 class="homePageTitle">Mes projets</h1>
     <div class="allHomeProjectContainer">
-        <div (click)="openProjectModal()" class="homeSkewedProjectContainer timePlankHomeContainer">
+        <div (click)="openProjectModal('timePlankModal')" class="homeSkewedProjectContainer timePlankHomeContainer">
             <img class="homeSkewProjectImg timePlankHomeImg" src="assets/projectImages/gym1.png" />
             <div class="foregroundHomeProjectText timePlankForegroundText">
                 <span>TimePlank</span>
             </div>
         </div>
-        <div class="homeSkewedProjectContainer fairDrawHomeContainer">
+        <div (click)="openProjectModal('fairDrawModal')" class="homeSkewedProjectContainer fairDrawHomeContainer">
             <img class="homeSkewProjectImg fairDrawHomeImg" src="assets/projectImages/fairDraw7.jpg" />
             <div class="foregroundHomeProjectText fairDrawForegroundText">
                 <span>FairDraw</span>
@@ -42,15 +42,56 @@
     </div>
 </div>
 
-<div id="projectModal" class="projectModal">
+<div id="timePlankModal" class="projectModal">
     <div class="projectModalContent">
-        <div class="projectImgSlideshow">
-            <img src="assets/welcomeImages\projectScreenShot\TimePlank\timePlank1.png">
+        <div class="mobileProjectImgSlideshow">
+            <img src="assets/welcomeImages/projectScreenShot/TimePlank/timePlank1.png">
+            <img src="assets/welcomeImages/projectScreenShot/TimePlank/timePlank2.png">
+            <img src="assets/welcomeImages/projectScreenShot/TimePlank/timePlank3.png">
         </div>
-        <h1>John Doe</h1>
-        <p class="title">CEO & Founder, Example</p>
-        <p>Harvard University</p>
+        <h1>TimePlank</h1>
+        <p class="projectModalTitle">Application Android/IOS créée avec le framework <img class="ionic"
+                src="assets/projectImages/ionic3.png" alt="Ionic 3"></p>
+        <p>Cette application permet de paramétrer un minuteur afin de faire des séries d'exercices entrecoupées de
+            séries de repos</p>
         <a class="linkToProjectSrc" href="#"><i class="ProjectSrcIcon fab fa-android"></i> </a>
+        <a class="linkToProjectSrc" href="#"><i class="ProjectSrcIcon fab fa-github"></i> </a>
+    </div>
+</div>
+
+<div id="fairDrawModal" class="projectModal">
+    <div class="projectModalContent">
+        <div class="webProjectImgSlideshow">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides projectImgSlideshowFade">
+                    <img src="assets/welcomeImages/projectScreenShot/FairDraw/FairDraw1.png" style="width:100%">
+                </div>
+
+                <div class="mySlides projectImgSlideshowFade">
+                    <img src="assets/welcomeImages/projectScreenShot/FairDraw/FairDraw2.png" style="width:100%">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+                <a class="next" (click)="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" (click)="currentSlide(1)"></span>
+                <span class="dot" (click)="currentSlide(2)"></span>
+            </div>
+        </div>
+        <h1>FairDraw</h1>
+        <p class="projectModalTitle">Extension Chrome codée en <img class="typeScript"
+                src="assets/projectImages/typescript-2.0.jpg" alt="TypeScript">
+        </p>
+        <p>Cette application permet de paramétrer un minuteur afin de faire des séries d'exercices entrecoupées de
+            séries de repos</p>
+        <a class="linkToProjectSrc" href="#"><i class="ProjectSrcIcon fab fa-chrome"></i> </a>
         <a class="linkToProjectSrc" href="#"><i class="ProjectSrcIcon fab fa-github"></i> </a>
     </div>
 </div>

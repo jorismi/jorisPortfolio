@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotoComponent implements OnInit {
   //TODO BONUS faire un wiggle pour les flèches quand on est tout à gauche ou a droite des slides Photos
-  //TODO BONUS Essayer d'autre effets lors du survol des photos (desaturation)
+  //TODO BONUS Use thumbnailImages for gallery
 
   currentSlideName: string;
   currentSlideCaption: string;
