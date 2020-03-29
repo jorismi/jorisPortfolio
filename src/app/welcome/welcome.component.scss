@@ -386,17 +386,20 @@
     color: white;
 }
 
-/* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 50vw;
     position: relative;
     margin: auto;
 }
   
-  /* Hide the images by default */
+/* Hide the images by default */
 .mySlides {
     display: none;
     padding: 0 2rem 0 2rem;
+}
+
+.webProjectImgSlideshow, .mobileProjectImgSlideshow{
+    border-bottom: 0.2rem solid black;
 }
   
   /* Next & previous buttons */
@@ -426,6 +429,7 @@
   /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+    color: white;
 }
   
   /* The dots/bullets/indicators */
@@ -454,3 +458,74 @@
     from {opacity: 0.4}
     to {opacity: 1}
 }
+
+.photosSection{
+    min-height: 100%; 
+    background-image: url("../../assets/welcomeImages/Laponie-0147.png");
+    opacity: 0.95;
+    //filter: blur(0.3rem) saturate(70%);
+}
+
+.cutoutText {
+    background-color: white;
+    color: black;
+    font-size: 10vw; /* Responsive font size */
+    font-weight: bold;
+    margin: 0 auto; /* Center the text container */
+    padding: 0.5rem;
+    width: 80%;
+    text-align: center; /* Center text */
+    position: absolute; /* Position text */
+    top: 50%; /* Position text in the middle */
+    left: 50%; /* Position text in the middle */
+    transform: translate(-50%, -50%); /* Position text in the middle */
+    mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
+.btnViewPhotos{
+    font-size: 5vw; /* Responsive font size */
+    font-weight: bold;
+    padding: 0.5rem 7rem 0.5rem 7rem;
+    position: absolute; /* Position text */
+    top: 80%; /* Position text in the middle */
+    left: 50%; /* Position text in the middle */
+    transform: translate(-50%, -50%); /* Position text in the middle */
+    transition: all 0.5s ease-in-out;
+    color: #292929;
+    border: none; 
+    border-radius: 2rem;
+    background-size: 200% 100%; 
+    background-position: 200% 0; 
+	background-image: linear-gradient(to right, #fff 50%, #05C2C9 50%); 
+}
+
+.btnViewPhotos:hover{
+    background-position: 100% 0; 
+}
+
+.btnViewPhotos span {
+    display: inline-block;
+    transition: 0.5s ease-in-out;
+}
+  
+.btnViewPhotos:hover span {
+    transform: translateX(-50%);
+    color:white;
+}
+
+
+.btnViewPhotos span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transform: translateX(-1000%);
+    transition: 0.5s ease-in-out;
+}
+
+.btnViewPhotos:hover span:after {
+    opacity: 1;
+    transform: translateX(200%);
+    color:white;
+}
+
