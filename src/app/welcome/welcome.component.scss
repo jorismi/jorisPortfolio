@@ -15,7 +15,7 @@
 
 .homePageSection{
     min-height: 125%; 
-    background-image: url("../../assets/welcomeImages/Laponie-0147.png");
+    background-image: url("../../assets/welcomeImages/welcomeSection.png");
     opacity: 0.95;
     filter: blur(0.3rem) saturate(70%);
 }
@@ -459,16 +459,19 @@
     to {opacity: 1}
 }
 
+.experiencesSection{
+    min-height: 100%; 
+    background-image: url("../../assets/welcomeImages/photoSection.jpg");
+    opacity: 0.95;
+}
+
 .photosSection{
     min-height: 100%; 
-    background-image: url("../../assets/welcomeImages/Laponie-0147.png");
+    background-image: url("../../assets/welcomeImages/photoSection.jpg");
     opacity: 0.95;
-    //filter: blur(0.3rem) saturate(70%);
 }
 
 .cutoutText {
-    background-color: white;
-    color: black;
     font-size: 10vw; /* Responsive font size */
     font-weight: bold;
     margin: 0 auto; /* Center the text container */
@@ -479,10 +482,17 @@
     top: 50%; /* Position text in the middle */
     left: 50%; /* Position text in the middle */
     transform: translate(-50%, -50%); /* Position text in the middle */
+    /*background-color: white;
+    color: black;
     mix-blend-mode: screen; /* This makes the cutout text possible */
+
+
+    background-color: black;
+    color: white;
+    mix-blend-mode: multiply;
 }
 
-.btnViewPhotos{
+.btnView{
     font-size: 5vw; /* Responsive font size */
     font-weight: bold;
     padding: 0.5rem 7rem 0.5rem 7rem;
@@ -491,30 +501,31 @@
     left: 50%; /* Position text in the middle */
     transform: translate(-50%, -50%); /* Position text in the middle */
     transition: all 0.5s ease-in-out;
-    color: #292929;
+    color: white;
     border: none; 
     border-radius: 2rem;
     background-size: 200% 100%; 
     background-position: 200% 0; 
-	background-image: linear-gradient(to right, #fff 50%, #05C2C9 50%); 
+    background-image: linear-gradient(to right, black 50%, #05C2C9 50%); 
+    overflow: hidden;
 }
 
-.btnViewPhotos:hover{
+.btnView:hover{
     background-position: 100% 0; 
 }
 
-.btnViewPhotos span {
+.btnView span {
     display: inline-block;
     transition: 0.5s ease-in-out;
 }
   
-.btnViewPhotos:hover span {
+.btnView:hover span {
     transform: translateX(-50%);
     color:white;
 }
 
 
-.btnViewPhotos span:after {
+.btnView span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -523,9 +534,50 @@
     transition: 0.5s ease-in-out;
 }
 
-.btnViewPhotos:hover span:after {
+.btnView:hover span:after {
     opacity: 1;
     transform: translateX(200%);
     color:white;
 }
 
+.btnViewExpContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnViewExp{
+    background-color: #05C2C9;
+    color: white;
+    font-size: 3vw;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    border: none; 
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    margin-top: 2rem;
+}
+
+.btnViewExp span:before {
+    content: '\21E2';
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    right: 110%;
+}
+  
+.btnViewExp:hover span:before {
+    right: 5%;
+}
+
+.btnViewExp span:after {
+    content: '\21E2';
+    display: inline-block;
+    margin-left: 2rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.btnViewExp:hover span:after {
+    transform: translateX(10rem);
+}

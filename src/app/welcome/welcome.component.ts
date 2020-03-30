@@ -22,8 +22,7 @@ export function debounce(delay: number = 100): MethodDecorator {
 })
 
 export class WelcomeComponent implements OnInit {
-  // TODO Project section: make slideshow img
-  // TODO Project section: make photo section (cutout text)
+  // TODO Project section: improve button (more responsive and change arrow)
   // TODO BONUS Make Contact section
   // TODO BONUS remake skill grid to accept various number of row for each column
   // TODO BONUS add down arrow shape at welcome div
