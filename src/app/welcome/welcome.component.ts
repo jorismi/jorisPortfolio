@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from "@angular/router";
 
 // Debounce scroll funcion
 export function debounce(delay: number = 100): MethodDecorator {
@@ -42,6 +43,8 @@ export class WelcomeComponent implements OnInit {
   slideIndex: number = 1;
 
   ngOnInit() {}
+
+  constructor(private router: Router){}
 
   @HostListener('window:scroll', ['$event'])
   @debounce()
@@ -115,5 +118,13 @@ export class WelcomeComponent implements OnInit {
     let currentSlide = slides[this.slideIndex - 1] as HTMLElement;
     currentSlide.style.display = "block";
     dots[this.slideIndex - 1].className += " active";
+  }
+
+  goToExperiencesSection(){
+    this.router.navigateByUrl('/experiences');
+  }
+
+  goToPhotosSection(){
+    this.router.navigateByUrl('/photo');
   }
 }

@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="btnViewExpContainer">
-        <button class="btnViewExp"><span>Mon parcours</span></button>
+        <button class="btnViewExp" (click)="goToExperiencesSection()"><span>Mon parcours</span></button>
     </div>
 </div>
 <div class="homePageTextContainer homeProjectContainer">
@@ -47,7 +47,7 @@
 
 <div class="parallax photosSection">
     <div class="cutoutText">Photographies</div>
-    <button class="btnView"> <span> Voir </span></button>
+    <button class="btnView" (click)="goToPhotosSection()"> <span> Voir </span></button>
 </div>
 
 
@@ -78,11 +78,12 @@
                 <div class="mySlides projectImgSlideshowFade">
                     <img src="assets/welcomeImages/projectScreenShot/FairDraw/FairDraw1.png" style="width:100%">
                 </div>
-
                 <div class="mySlides projectImgSlideshowFade">
                     <img src="assets/welcomeImages/projectScreenShot/FairDraw/FairDraw2.png" style="width:100%">
                 </div>
-
+                <div class="mySlides projectImgSlideshowFade">
+                    <img src="assets/welcomeImages/projectScreenShot/FairDraw/FairDraw3.png" style="width:100%">
+                </div>
                 <!-- Next and previous buttons -->
                 <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
                 <a class="next" (click)="plusSlides(1)">&#10095;</a>
@@ -93,6 +94,7 @@
             <div style="text-align:center">
                 <span class="dot" (click)="currentSlide(1)"></span>
                 <span class="dot" (click)="currentSlide(2)"></span>
+                <span class="dot" (click)="currentSlide(3)"></span>
             </div>
         </div>
         <h1>FairDraw</h1>
