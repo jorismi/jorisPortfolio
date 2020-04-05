@@ -7,8 +7,8 @@ import { Experience } from './experiences.class';
   styleUrls: ['./experiences.component.scss']
 })
 export class ExperiencesComponent implements OnInit {
+  // TODO Make download button work
   // TODO BONUS find bette icon for paul sabatier and university of florida
-  // TODO make experiencesKeyword responsive
   // TODO BONUS add newLine inside experience paragraph
   // TODO BONUS Add circle or other to vertical line (=> https://www.w3schools.com/howto/howto_css_timeline.asp)
   // TODO BONUS Make expereienceKeyword clickable to filter
@@ -33,8 +33,6 @@ export class ExperiencesComponent implements OnInit {
       "En parallèle, j’ai créé le site web d'une des chefs du laboratoire. " +
       "Ces deux mois ont été très enrichissants car j'ai pu améliorer mon anglais, m'immerger dans une nouvelle culture et approfondir mes connaissances de la programmation web.",
       ["Anglais", "HTML", "PHP", "CSS", "Javascript"]),
-    new Experience("05/05/2019", "03/20/2019", "HTML et PHP", "Capgemini", "Paris", "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris semper non neque scelerisque vulputate. Morbi porttitor feugiat erat, nec bibendum nisl scelerisque eget. In quis dolor vitae nunc rutrum dapibus. Nam a risus vel libero placerat euismod et sed ipsum. Vestibulum et leo malesuada, varius enim ut, pharetra risus. Nullam semper rhoncus tortor, a interdum libero mollis eu. Donec nec venenatis enim, ut condimentum neque. Nam ac sem volutpat, eleifend mi nec, mattis lectus. Duis maximus fermentum odio eget tincidunt", ["HTML", "PHP"]),
-    new Experience("05/28/2018", "01/15/2019", "Angular", "Capgemini", "Bordeaux", "Super expérience en Angular", ["Angular"]),
   ];
   // List of keyword which filter my experiences, if empty, display all
   experienceFilterArgs: string[] = [];

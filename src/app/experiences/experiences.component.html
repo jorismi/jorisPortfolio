@@ -2,6 +2,14 @@
     <button *ngFor="let buttonFilter of buttonFilters" class="filterBtn"
         (click)="filter($event)">{{buttonFilter}}</button>
 </div>
+
+<div class="downloadCVBtnContainer">
+    <button class="downloadCVBtn">
+        <div class="downloadBtnIcon"><i class="fas fa-file-download"></i></div>
+        <span class="downloadBtnText">Télécharger mon CV</span>
+    </button>
+</div>
+
 <div class="timeline">
     <div class="timelineCard" *ngFor="let experience of experiences | experienceFilter:experienceFilterArgs">
         <div class="dateContent">
@@ -24,8 +32,8 @@
             <h3> <i class="fas fa-map-marker-alt"></i>{{experience.location}} </h3>
             <p> {{experience.description}} </p>
             <div>
-                <span class="expKeyword" [ngClass]="{'keywordActivated' : activateKeyword(experienceKeyword)}"
-                    *ngFor="let experienceKeyword of experience.keywords">{{experienceKeyword}}</span>
+                <p class="expKeyword" [ngClass]="{'keywordActivated' : activateKeyword(experienceKeyword)}"
+                    *ngFor="let experienceKeyword of experience.keywords">{{experienceKeyword}}</p>
             </div>
         </div>
     </div>
